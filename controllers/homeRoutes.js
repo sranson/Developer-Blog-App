@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
       const posts = postData.map((post) => post.get({ plain: true }));
   
       // Pass serialized data and session flag into template
-      res.render('home-loggedOut', { 
+      res.render('home', { 
         posts, 
         logged_in: req.session.logged_in 
       });
@@ -27,6 +27,34 @@ router.get('/', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+
+// create a route to view one post as a logged out user
+router.get('/post/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
+
+    const post = postData.get({ plain: true });
+
+    res.render('onePost-loggedOut', {
+      ...post,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+
+
 
 router.get('/login', (req, res) => {
     res.render('login');

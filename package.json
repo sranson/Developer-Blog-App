@@ -1,0 +1,23 @@
+{
+  "name": "developer_blog_app",
+  "version": "1.0.0",
+  "description": "This site is a CMS-style blog site, where developers can publish their blog posts and comment on other developers’ posts as well. This app follows the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sranson/Developer-Blog-App.git"
+  },
+  "keywords": [
+    "Node",
+    "Express"
+  ],
+  "author": "Salome Ranson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sranson/Developer-Blog-App/issues"
+  },
+  "homepage": "https://github.com/sranson/Developer-Blog-App#readme"
+}

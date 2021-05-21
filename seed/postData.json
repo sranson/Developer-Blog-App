@@ -1,17 +1,17 @@
 [
     {
       "title": "My First Bootcamp",
-      "body": "I attended the GA Tech Bootcamp this year.",
+      "content": "I attended the GA Tech Bootcamp this year.",
       "userId": 1
     },
     {
       "title": "My first experience working with a team",
-      "body": "Project 1 was the first time that I collaborated on a development project with a team",
+      "content": "Project 1 was the first time that I collaborated on a development project with a team",
       "userId": 2
     },
     {
       "title": "Where to go from here",
-      "body": "We are starting project 2 this week.",
+      "content": "We are starting project 2 this week.",
       "userId": 3
     }
   ]

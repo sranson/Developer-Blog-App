@@ -1,17 +1,17 @@
 [
     {
-      "title": "My First Bootcamp",
-      "content": "I attended the GA Tech Bootcamp this year.",
+      "title": "Learning Node.js",
+      "content": "Node.js is an open-source and cross-platform JavaScript runtime environment. It is a popular tool for almost any kind of project! Node.js runs the V8 JavaScript engine, the core of Google Chrome, outside of the browser.",
       "userId": 1
     },
     {
-      "title": "My first experience working with a team",
-      "content": "Project 1 was the first time that I collaborated on a development project with a team",
+      "title": "Working with Express.js",
+      "content": "Express.js, or simply Express, is a back end web application framework for Node.js, released as free and open-source software under the MIT License.",
       "userId": 2
     },
     {
-      "title": "Where to go from here",
-      "content": "We are starting project 2 this week.",
+      "title": "Using Handlebars",
+      "content": "Handlebars provides the power necessary to let you build semantic templates effectively with no frustration. Handlebars is largely compatible with Mustache templates.",
       "userId": 3
     }
   ]

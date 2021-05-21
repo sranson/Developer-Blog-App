@@ -1,4 +1,6 @@
-<h1>HOME PAGE</h1>
+<div style="margin-top: 2%;">
+  <h2>Home</h2>
+</div>
 
 <div class="menu-container" style="margin-top: 3%; margin-left: 3%; margin-right: 3%">
 <div class="posts">
@@ -6,15 +8,14 @@
   <article class="card" style="margin-bottom: 3%;">
     <div class="card-header flex-row justify-space-between">
       <h2>
-        <a style="text-decoration: none;" href="/post/{{id}}">{{title}}</a>
+        <a style="text-decoration: none; color: inherit;" href="/post/{{id}}">{{title}}</a>
       </h2>
       <div>
         Posted by {{user.username}} on {{format_date date_created}}
-        {{!-- <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p> --}}
       </div>
     </div>
     <div class="card-body">
-      {{body}}
+      {{content}}
     </div>
   </article>
   {{/each}}

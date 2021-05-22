@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
       // Pass serialized data and session flag into template
       res.render('home', { 
         posts, 
-        logged_in: req.session.logged_in 
+        logged_In: req.session.logged_In 
       });
     } catch (err) {
       res.status(500).json(err);
@@ -45,7 +45,7 @@ router.get('/post/:id', async (req, res) => {
 
     res.render('onePost-loggedOut', {
       ...post,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_In
     });
   } catch (err) {
     res.status(500).json(err);
@@ -68,7 +68,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 
     res.render('onePost-loggedIn', {
       ...user,
-      logged_in: true
+      logged_In: true
     });
   } catch (err) {
     res.status(500).json(err);
@@ -84,8 +84,29 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-
-
+router.get('/logout', async (req, res) => {
+  req.session.logged_In = false;
+  try {
+    // Get all posts and JOIN with user data
+    const postData = await Post.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
+     // Serialize data so the template can read it
+     const posts = postData.map((post) => post.get({ plain: true }));
+      // Pass serialized data and session flag into template
+    res.render('home', { 
+      posts, 
+      logged_In: req.session.logged_In 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 

@@ -4,9 +4,23 @@ const withAuth = require('../utils/auth');
 
 
 // When logged out user tries to access the dashboard, they  are routed to log in screen
-// When I remove 'withAuth', I get a routing error
+// When logged in user tries to access the dashboard, they get the dashboard screen
 router.get('/', withAuth, async (req, res) => {
-  res.render('layouts/dashboard');
+  try {
+    const postData = await Post.findAll({
+      where: {
+        userId: req.session.userId,
+      },
+    });
+
+    const posts = postData.map((post) => post.get({ plain: true }));
+  res.render('home', {
+    layout: 'dashboard',
+    posts,
+  });
+  } catch (err) {
+    res.redirect('login')
+  }
 });
 
 // router.get('/new', withAuth, (req, res) => {

@@ -62,7 +62,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 //   }
 // });
 
-// TO UPDATE A POST --- THIS WORKS IN POSTMAN
+
 router.put('/:id', (req, res) => {
     Post.update(
       {

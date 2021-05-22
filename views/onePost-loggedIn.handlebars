@@ -1,13 +1,13 @@
 <div class="post">
   <article class="card" style="margin-top: 3%;">
     <div class="card-header flex-row justify-space-between">
-      <h2>{{title}}</h2>
+      <h2>{{post.title}}</h2>
       <div>
-        Posted by {{user.username}} on {{format_date date_created}}
+        Posted by {{User.username}} on 
       </div>
     </div>
     <div class="card-body">
-      {{content}}
+      {{post.content}}
     </div>
   </article>
 
@@ -24,7 +24,7 @@
               {{body}}
             </p>
             <p>
-              &mdash; {{User.username}}, {{format_date createdAt}}
+              &mdash; {{User.username}}, 
             </p>
           </div>
         {{/each}}
@@ -34,7 +34,7 @@
 
 
 
-  <form id="new-comment-form" class="card" style="margin-top: 3%;">
+  {{!-- <form id="new-comment-form" class="card" style="margin-top: 3%;">
     <div class="card-header">
       <h3>Add Comment</h3>
     </div>
@@ -52,7 +52,7 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </div>
   </form>
-</div>
+</div> --}}
 
 
 <script src="/js/comment.js"></script>

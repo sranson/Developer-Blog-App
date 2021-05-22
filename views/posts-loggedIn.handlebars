@@ -1,0 +1,19 @@
+<div class="menu-container" style="margin-top: 3%; margin-left: 3%; margin-right: 3%">
+  <div class="posts">
+    {{#each posts}}
+    <article class="card" style="margin-bottom: 3%;">
+      <div class="card-header flex-row justify-space-between">
+        <h2>
+          <a style="text-decoration: none; color: inherit;" href="api/post/edit/{{id}}">{{title}}</a>
+        </h2>
+        <div>
+          Posted by {{User.username}} on {{format_date date_created}}
+        </div>
+      </div>
+      <div class="card-body">
+        {{content}}
+      </div>
+    </article>
+    {{/each}}
+  </div>
+</div>

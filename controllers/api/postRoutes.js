@@ -17,7 +17,32 @@ router.post('/', withAuth, async (req, res) => {
     }
   });
 
+// GET one post
+router.get('/:id', (req, res) => {
+  Post.findOne({ id: req.body.id }).then((postData) => {
+    res.json(postData);
+  });
+});
 
+
+router.put('/:id', (req, res) => {
+    Post.update(
+      {
+        title: req.body.title,
+        content: req.body.content,
+      },
+      {
+      where: {
+        id: req.params.id,
+      },
+    })
+    .then((updatedPost) => {
+      res.json(updatedPost);
+    })
+    .catch((err) => res.json(err));
+  });
+
+ 
 
 
 

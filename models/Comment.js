@@ -5,7 +5,7 @@ class Comment extends Model {}
 
 Comment.init(
   {
-    body: {
+    content: {
       type: DataTypes.STRING,
     },
     date_created: {
@@ -16,7 +16,7 @@ Comment.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'User',
         key: 'id',
       },
     },

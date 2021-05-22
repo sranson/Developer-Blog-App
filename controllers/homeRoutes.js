@@ -16,7 +16,6 @@ router.get('/', async (req, res) => {
       });
       // Serialize data so the template can read it
       const posts = postData.map((post) => post.get({ plain: true }));
-  
       // Pass serialized data and session flag into template
       res.render('posts-loggedOut', { 
         layout: 'main',
@@ -27,6 +26,7 @@ router.get('/', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
 
 // create a route to view one post as a logged OUT user
 router.get('/post/:id', async (req, res) => {
@@ -42,7 +42,7 @@ router.get('/post/:id', async (req, res) => {
 
     const post = postData.get({ plain: true });
 
-    res.render('onePost-loggedOut', {
+    res.render('onePost-loggedIn', {
       ...post,
     });
   } catch (err) {
@@ -75,7 +75,7 @@ router.get('/logout', async (req, res) => {
      // Serialize data so the template can read it
      const posts = postData.map((post) => post.get({ plain: true }));
       // Pass serialized data and session flag into template
-    res.render('posts', { 
+    res.render('posts-loggedOut', { 
       posts, 
       logged_In: req.session.logged_In 
     });

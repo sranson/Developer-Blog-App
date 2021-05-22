@@ -75,27 +75,6 @@ router.get('/post/:id', withAuth, async (req, res) => {
   }
 });
 
-// create a route to redirect user to login if they are logged OUT
-// Use withAuth middleware to prevent access to route
-router.get('/dashboard', withAuth, async (req, res) => {
-  try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Post }],
-    });
-
-    const user = userData.get({ plain: true });
-
-    res.render('/login', {
-      ...user,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 
 router.get('/signup', (req, res) => {
   res.render('signup')
@@ -105,9 +84,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-// router.get('/dashboard', (req, res) => {
-//     res.render('layouts/dashboard')
-// })
+
 
 
 

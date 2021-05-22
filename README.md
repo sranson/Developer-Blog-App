@@ -22,7 +22,6 @@ This site is a CMS-style blog site, where developers can publish their blog post
 
 ![Screenshot](public/images/Screenshot2.png) 
 
-![Screenshot](public/images/Screenshot3.png) 
 
 ## Deployed Site
 [Developer Tech Blog](https://developer-blog-app.herokuapp.com/)

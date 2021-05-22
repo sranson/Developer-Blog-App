@@ -83,7 +83,19 @@ router.put('/:id', (req, res) => {
     .catch((err) => res.json(err));
   });
 
- 
+  router.delete('/:id', (req, res) => {
+    // Looks for the books based on isbn given in the request parameters and deletes the instance from the database
+    Post.destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then((deletedPost) => {
+        res.json(deletedPost);
+        // res.render('/dashboard');
+      })
+      .catch((err) => res.json(err));
+  });
 
 
 

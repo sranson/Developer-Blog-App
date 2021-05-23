@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
   });
 
 
-// create a route to view one post as a logged OUT user
+
 router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {

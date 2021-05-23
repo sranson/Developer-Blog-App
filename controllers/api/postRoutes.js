@@ -42,27 +42,6 @@ router.get('/edit/:id', withAuth, async (req, res) => {
   }
 });
 
-// // // create a route to view one post as a logged IN user
-// // Use withAuth middleware to prevent access to route
-// router.get('/post/:id', withAuth, async (req, res) => {
-//   try {
-//     // Find the logged in user based on the session ID
-//     const userData = await User.findByPk(req.session.userId, {
-//       attributes: { exclude: ['password'] },
-//       include: [{ model: Post }],
-//     });
-
-//     const user = userData.get({ plain: true });
-//     res.render('onePost-loggedIn', {
-//       ...user,
-//       logged_In: true
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
-
 router.put('/:id', (req, res) => {
     Post.update(
       {

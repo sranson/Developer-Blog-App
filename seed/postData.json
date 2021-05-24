@@ -1,17 +1,17 @@
 [
     {
       "title": "Learning Node.js",
-      "content": "Node.js is an open-source and cross-platform JavaScript runtime environment. It is a popular tool for almost any kind of project! Node.js runs the V8 JavaScript engine, the core of Google Chrome, outside of the browser.",
+      "content": "Node.js is an open-source and cross-platform JavaScript runtime environment.",
       "userId": 1
     },
     {
       "title": "Working with Express.js",
-      "content": "Express.js, or simply Express, is a back end web application framework for Node.js, released as free and open-source software under the MIT License.",
+      "content": "Express.js, or simply Express",
       "userId": 2
     },
     {
       "title": "Using Handlebars",
-      "content": "Handlebars provides the power necessary to let you build semantic templates effectively with no frustration. Handlebars is largely compatible with Mustache templates.",
+      "content": "Handlebars provides the power necessary to let",
       "userId": 3
     }
   ]

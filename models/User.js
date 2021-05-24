@@ -27,8 +27,8 @@ User.init(
       allowNull: false,
       validate: {
         len: [4]
-      }
-    }
+      },
+    },
   },
   {
     hooks: {

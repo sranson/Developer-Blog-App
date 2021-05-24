@@ -11,20 +11,20 @@
     </div>
   </article>
 
-  {{#if Comments}}
+  {{#if comment }}
     <section class="card" style="margin-top: 2%;">
       <div class="card-header">
         <h3>Comments</h3>
       </div>
 
       <div class="card-body">
-        {{#each Comments}}
+        {{#each comment}}
           <div>
             <p>
               {{content}}
             </p>
             <p>
-              &mdash; {{User.username}}, 
+              &mdash; {{username}}, 
             </p>
           </div>
         {{/each}}

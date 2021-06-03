@@ -18,12 +18,18 @@ router.post('/', withAuth, async (req, res) => {
   });
 
 // GET one post
-router.get('/:id', withAuth, (req, res) => {
-  Post.findOne({ id: req.body.id }).then((postData) => {
-  res.json(postData);
-  res.render('editPost');
-  });
-});
+// router.get('/:id', withAuth, (req, res) => {
+//   Post.findByPk({ id: req.body.id }).then((postData) => {
+//   res.json(postData);
+//   res.render('editPost');
+//   });
+// });
+
+
+// router.get('/:id', withAuth, (req, res) => {
+//   console.log('GOT IT');
+// });
+
 
 router.get('/edit/:id', withAuth, async (req, res) => {
   try {

@@ -7,15 +7,15 @@
 This site is a CMS-style blog site, where developers can publish their blog posts and comment on other developers’ posts as well. This app follows the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
 ## Table of Contents
-[Screenshots](https://github.com/sranson/Developer-Blog#Screenshots)
+[Screenshots](https://github.com/sranson/Developer-Blog-App#Screenshots)
 
-[Deployed Site](https://github.com/sranson/Developer-Blog#deployed-site)
+[Deployed Site](https://github.com/sranson/Developer-Blog-App#deployed-site)
 
-[Questions](https://github.com/sranson/Developer-Blog#Questions)
+[Questions](https://github.com/sranson/Developer-Blog-App#Questions)
 
-[Contributing](https://github.com/sranson/Developer-Blog#Contributing)
+[Contributing](https://github.com/sranson/Developer-Blog-App#Contributing)
 
-[License](https://github.com/sranson/Developer-Blog#License)
+[License](https://github.com/sranson/Developer-Blog-App#License)
 
 ## Screenshots
 ![Screenshot](public/images/Screenshot1.png) 
